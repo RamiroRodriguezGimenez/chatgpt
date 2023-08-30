@@ -1,0 +1,198 @@
+{
+	"info": {
+		"_postman_id": "3cc1dc99-8195-4c87-b1c8-e8b68094d141",
+		"name": "chatgpt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "chat",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userName",
+							"value": "usuario1",
+							"type": "default"
+						},
+						{
+							"key": "question",
+							"value": "hola",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/chat",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"chat"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/user/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cantidad de veces de una pregunta",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/question/count/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"question",
+						"count",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usuarios no deudores",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/user/no-debtor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"no-debtor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtener admins que han consultado sus preguntas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/user/get-admin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"get-admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtener consdultas durante un perido",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/user/get-between-date?startDate=2022-08-01T00:00:00&endDate=2024-08-31T23:59:59",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"get-between-date"
+					],
+					"query": [
+						{
+							"key": "startDate",
+							"value": "2022-08-01T00:00:00"
+						},
+						{
+							"key": "endDate",
+							"value": "2024-08-31T23:59:59"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtener preguntas no consultadas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/question/not-answered",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"question",
+						"not-answered"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtener balance",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/user/balance/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"balance",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
